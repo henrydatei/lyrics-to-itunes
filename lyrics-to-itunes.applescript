@@ -21,3 +21,11 @@ tell application "Music"
 		set lyrics of (every track whose database ID is equal to myID) to ""
 	end repeat
 end tell
+
+tell application "Music"
+	set myList to (get database ID of every track whose lyrics contains "Google found nothing.")
+	
+	repeat with myID in myList
+		set lyrics of (every track whose database ID is equal to myID) to ""
+	end repeat
+end tell
